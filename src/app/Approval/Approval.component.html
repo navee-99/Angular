@@ -1,0 +1,116 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a routerlink="/" href="">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Approval</li>
+        <a class="responsive" class="glyphicon glyphicon-user disabled" style="color:black;margin-top: 0PX;margin-left: 1347PX;"> Naveen</a>
+    </ol>
+  </nav>
+  
+  
+  <div class="container register">
+   
+        <div class="col-md-12 register-right">
+          <div class="modal-header text-center">
+            <h5 class="modal-title w-100">Approval</h5>
+          </div>
+           
+            <div style="margin-top: 0%;" class="tab-content" >
+                
+                <div style="margin-top: 2%;" class="xyz" id="home" >
+                   
+                       
+                        <form [formGroup]="approvalForm" style="margin-left: 28%;" class="col-lg-offset-8">
+                            <div class="form-group">
+                                <label  for="website">CDSID:-</label>
+                                <a>
+                                <select style="width: 15%;" formControlName="userName" (change)="fetch()" >
+                                    <option *ngFor="let item of this.data" [value]="item.userName"  >
+                                      {{item.userName}}
+                                    </option>    
+                                </select></a>
+                                <!-- <input class="form-control" placeholder='CDSID' style="width: 15%;margin-left: 0%;" type="text" id="name"> -->
+                              
+                            </div>    
+                            <div class="form-group">
+                                <label for="website">Role:-</label>
+                                <select style="width: 15%;" formControlName="role">
+                                    
+                                    <option>
+                                      {{this.data2.role}}
+                                    </option>    
+                                     <option value="Die Buy Engineer">Die Buy Engineer</option>
+                                    <option value="Read Only User">Read Only User</option>
+                                    <option value="System Service Engineer">System Service Engineer</option>
+                                    <option value="Access Admin">Access Admin</option> 
+                                   
+                                </select>
+                                <!-- <input  class="form-control" placeholder='Role' style="width: 15%;margin-left: 0%;" type="text" id="name" > -->
+                               
+                            </div>
+                            <!-- <div class="form-group">
+                               
+                                <label class="form-label select-label">Program:-</label>
+                                <select class="select" style="width: 15%;" >
+                                    <option *ngFor="let item of this.data2.prgrmList" >
+                                      {{item}}
+                                    </option>    
+                                </select> -->
+                                
+                                <!-- <input class="form-control" placeholder='Program' style="width: 15%;margin-left: 0%;" type="text" id="name"> -->
+                               
+                            <!-- </div> -->
+                            <label class="form-label select-label">Program:-</label>
+                            <div class="autocomplete">
+                                <input name="suggestion" style="width: 60%;" type="text" placeholder="Program" [formControl]="typeahead" (click)="suggest()" >
+                              
+                                <select class="autocomplete-items" *ngIf="show" multiple style="height: 100px;width: 300px;">
+                                  <option  *ngFor="let item of suggestions" (click)="selectSuggestion(item)">{{ item }}</option>
+                                </select>
+                              </div> 
+                              
+                            
+                            
+                            <div class="form-group">
+                                <label  for="website">Region:-</label>
+                                <select style="width: 15%;" formControlName="region"> 
+                                    <option >
+                                      {{this.data2.region}}
+                                      
+                                    </option>   
+                                   <option value="APA">APA</option>
+                                    <option value="EU">EU</option>
+                                    <option value="NA">NA</option>
+                                    <option value="SA">SA</option> 
+                                </select>
+                                <!-- <input class="form-control" placeholder='Region' style="width: 15%;margin-left: 0%;" type="text" id="name"> -->
+                                
+                            </div>
+                            <div class="form-group">
+                                <label  for="website">User Comment:-</label>
+                                <select style="width: 15%;" formControlName="userComments">
+                                    <option >
+                                      {{this.data2.userComments}}
+                                    </option>    
+                                </select>
+                                <!-- <input class="form-control" placeholder='Admin Comment' style="width: 15%;margin-left: 0%;" type="text" id="name"> -->
+                                
+                            </div>
+                            <div class="form-group">
+                                <label  for="website">Admin Comment:-</label>
+                              
+                                <input class="form-control" placeholder='Admin Comment' formControlName="AdminComment" style="width: 15%;margin-left: 0%;" type="text" id="name">
+                                
+                            </div>
+                            <br>
+                            <button  style="width: 20%; margin-left: 0%;" class="btn btn-success" type="submit" (click)="signUp()"  >Approve</button>
+                            <button style="width: 20%;margin-left: 20%;margin-bottom: 1%;" class="btn btn-success" type="deny" (click)="deny()" >Deny</button>
+                            
+                        </form>
+            </div>
+        </div>
+    </div>
+  
+  </div>
+  
+
+  

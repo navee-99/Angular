@@ -1,0 +1,251 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a routerlink="/" href="">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">General Inspection</li>
+      <a class="responsive" class="glyphicon glyphicon-user disabled" style="color:black;margin-top: 0PX;margin-left: 1255PX;"> Naveen</a>
+  </ol>
+</nav>
+
+<br>
+<div class="container register">
+//<!-- General Inspection-->
+<div >
+  <div style="margin-top: 0%;" >
+  <h1 style="text-align: center;">General Inspection</h1>
+    <div class="row">
+      <div class="col-xs-12 ">
+        <nav>
+          <div style="margin-top: 1%;margin-left: 1%;" class="nav nav-tab" id="nav-tab" >
+            <a class="nav-item nav-link" id="#g1" data-toggle="tab" href="#g1" role="tab" aria-controls="nav-home" aria-selected="true">Documents</a>
+            <a class="nav-item nav-link" id="#g2" data-toggle="tab" href="#g2" role="tab" aria-controls="nav-profile" aria-selected="false">Blanks</a>
+            <a class="nav-item nav-link" id="#g3" data-toggle="tab" href="#g3" role="tab" aria-controls="nav-contact" aria-selected="false">Finished Part</a>
+          </div>
+        </nav>
+        <div class="panel-body">
+          <div class="tab-content">
+              <div class="tab-pane fade in active" id="g1">
+                <table >
+                  <thead >
+                      <tr >
+                          <th class="text-center">
+                              Item
+                          </th>
+                          <th class="text-center">
+                              Subject
+                          </th>
+                          <th class="text-center">
+                              Status
+                          </th>
+                          <th class="text-center">
+                              Remarks
+                          </th>
+                          
+                      </tr>
+                  </thead>
+                  <tr>
+                    <td  style="text-decoration: underline;color: blue;">A1</td>
+                    <td  style="text-align: left;">It seems we would need a sort intersection operator for that. The problem has been solved in this case by setting the border on the whole.</td>
+                    <td  data-name="name">
+                      <!-- <input style="width: 50%; margin-left: 25%;margin-top: 10%;" type="text" name='name0'  placeholder="Status" class="form-control"/> -->
+                      <div>
+                        <button class="btn btn-default " type="button" >OK
+                        <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">OK</a></li>
+                          <li><a href="#">N/A</a></li>
+                          <li><a routerLink="/test6form">MOD</a></li>
+                          <li><a routerLink="/test6form">MOD-Q</a></li>
+                        </ul>
+                      </div>
+                          
+                  </td>
+                    <td data-name="desc">
+                      <textarea style="width: 350px;height: 100px;" name="desc0" placeholder="Remarks" class="form-control"></textarea>
+                  </td>
+                  </tr><br>
+                  <tr>
+                    <td style="text-decoration: underline;color: blue;">A2</td>
+                    <td style="text-align: left;">If user select the category Documents/ Blanks/ Finished Part, the below screens will be displayed Whenever user select the category.</td>
+                    <!-- <input class="form-control" style="width: 50%;height: auto;" type="text"> -->
+                    <td data-name="name">
+                      <!-- <input style="width: 50%; margin-left: 25%;" type="text" name='name0'  placeholder='Status' class="form-control"/> -->
+                      <div class="dropdown">
+                        <button class="btn btn-default " type="button" data-toggle="dropdown">N/A
+                        <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">OK</a></li>
+                          <li><a href="#">N/A</a></li>
+                          <li><a routerLink="/test6form">MOD</a></li>
+                          <li><a routerLink="/test6form">MOD-Q</a></li>
+                        </ul>
+                      </div>
+                    </td>
+                    <td data-name="desc">
+                      <textarea style="width: 350px;height: 100px;" name="desc0" placeholder="Remarks" class="form-control"></textarea>
+                  </td>
+                  </tr><br>
+                  <tr>
+                      <td style="text-decoration: underline;color: blue;">A3</td>
+                      <td  style="text-align: left;">Checklist reference number. Here users can perform various test cases like A1, A2, A3 on the Dieset the is being examined.</td>
+                      <!-- <input class="form-control" style="width: 50%;height: auto;" type="text"> -->
+                      <td  data-name="name">
+                          <!-- <input style="width: 50%; margin-left: 25%;" type="text" name='name0'  placeholder='Status' class="form-control"/> -->
+                          <div class="dropdown">
+                            <button class="btn btn-default " type="button" data-toggle="dropdown">OK
+                            <span class="caret"></span></button>
+                            <ul class="dropdown-menu">
+                              <li><a href="#">OK</a></li>
+                              <li><a href="#">N/A</a></li>
+                              <li><a routerLink="/test6form">MOD</a></li>
+                              <li><a routerLink="/test6form">MOD-Q</a></li>
+                            </ul>
+                          </div>
+                        </td>
+                      <td data-name="desc">
+                        <textarea style="width: 350px;height: 100px;" name="desc0" placeholder="Remarks" class="form-control"></textarea>
+                    </td>
+                    </tr><br>
+                    <tr>
+                      <td  style="text-decoration: underline;color: blue;">A4</td>
+                      <td  style="text-align: left;">If there is any Buyoff issue, user can change the status from Blank to “Mod” or “Mod-Q” for upload the issue image.</td>
+                      <!-- <input class="form-control" style="width: 50%;height: auto;" type="text"> -->
+                      <td  data-name="name">
+                          <!-- <input style="width: 50%; margin-left: 25%;" type="text" name='name0'  placeholder='Status' class="form-control"/> -->
+                          <div class="dropdown">
+                            <button class="btn btn-default " type="button" data-toggle="dropdown">MOD
+                            <span class="caret"></span></button>
+                            <ul class="dropdown-menu">
+                              <li><a href="#">OK</a></li>
+                              <li><a href="#">N/A</a></li>
+                              <li><a routerLink="/test6form">MOD</a></li>
+                              <li><a routerLink="/test6form">MOD-Q</a></li>
+                            </ul>
+                          </div>
+                        </td>
+                      <td data-name="desc">
+                        <textarea style="width: 350px;height: 100px;" name="desc0" placeholder="Remarks" class="form-control"></textarea>
+                    </td>
+                    </tr><br>
+                    
+                </table>
+              </div>
+              <div class="tab-pane fade" id="g2">
+                <table>
+                  <thead>
+                      <tr >
+                          <th class="text-center">
+                              Item
+                          </th>
+                          <th class="text-center">
+                              Subject
+                          </th>
+                          <th class="text-center">
+                              Status
+                          </th>
+                          <th class="text-center">
+                              Remarks
+                          </th>
+                          
+                      </tr>
+                  </thead>
+                  <tr>
+                    <td  style="text-decoration: underline;color: blue;">B1</td>
+                    <td style="text-align: left;">When user change the status to “Mod”/ “Mod-Q” in checklist screen, the below image upload screen will be displayed.</td>
+                    
+                   
+                    <td  data-name="name">
+                      
+                      <div class="dropdown">
+                        <button class="btn btn-default " type="button" data-toggle="dropdown">N/A
+                        <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">OK</a></li>
+                          <li><a href="#">N/A</a></li>
+                          <li><a routerLink="/test6form">MOD</a></li>
+                          <li><a routerLink="/test6form">MOD-Q</a></li>
+                        </ul>
+                      </div>
+                          
+                  </td>
+                    <td data-name="desc">
+                      <textarea style="width: 350px;height: 100px;" name="desc0" placeholder="Remarks" class="form-control"></textarea>
+                  </td>
+                  </tr><br>
+                  <tr>
+                    <td  style="text-decoration: underline;color: blue;">B2</td>
+                    <td  style="text-align: left;">User can select the issue severity as  LOW/MEDIUM/HIGH. If user is not select the severity, App will consider default severity.</td>
+                    
+                    <td  data-name="name">
+                      
+                      <div class="dropdown">
+                        <button class="btn btn-default " type="button" data-toggle="dropdown">OK
+                        <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">OK</a></li>
+                          <li><a href="#">N/A</a></li>
+                          <li><a routerLink="/test6form">MOD</a></li>
+                          <li><a routerLink="/test6form">MOD-Q</a></li>
+                        </ul>
+                      </div>
+                    </td>
+                    <td data-name="desc">
+                      <textarea style="width: 350px;height: 100px;" name="desc0" placeholder="Remarks" class="form-control"></textarea>
+                  </td>
+                  </tr><br>
+                  <tr>
+                      <td  style="text-decoration: underline;color: blue;">B3</td>
+                      <td  style="text-align: left;">User can view the loaded images. There is option to load the images in view image screen also. If users wants to delete.</td>
+                      
+                      <td  data-name="name">
+                          
+                          <div class="dropdown">
+                            <button class="btn btn-default " type="button" data-toggle="dropdown">MOD
+                            <span class="caret"></span></button>
+                            <ul class="dropdown-menu">
+                              <li><a href="#">OK</a></li>
+                              <li><a href="#">N/A</a></li>
+                              <li><a routerLink="/test6form">MOD</a></li>
+                              <li><a routerLink="/test6form">MOD-Q</a></li>
+                            </ul>
+                          </div>
+                        </td>
+                      <td data-name="desc">
+                        <textarea style="width: 350px;height: 100px;" name="desc0" placeholder="Remarks" class="form-control"></textarea>
+                    </td>
+                    </tr><br>
+                    <tr>
+                      <td  style="text-decoration: underline;color: blue;">B4</td>
+                      <td  style="text-align: left;">It seems we would need a sort intersection operator for that. The problem has been solved in this case by setting the border on the whole</td>
+                      
+                      <td  data-name="name">
+                          
+                          <div class="dropdown">
+                            <button class="btn btn-default " type="button" data-toggle="dropdown">MOD-Q
+                            <span class="caret"></span></button>
+                            <ul class="dropdown-menu">
+                              <li><a href="#">OK</a></li>
+                              <li><a href="#">N/A</a></li>
+                              <li><a routerLink="/test6form">MOD</a></li>
+                              <li><a routerLink="/test6form">MOD-Q</a></li>
+                            </ul>
+                          </div>
+                        </td>
+                      <td data-name="desc">
+                        <textarea style="width: 350px;height: 100px;" name="desc0" placeholder="Remarks" class="form-control"></textarea>
+                    </td>
+                    </tr><br>
+                    
+                </table>
+              </div>
+              <div class="tab-pane fade" id="g3">
+                ..............In Progresssss..........Finished Part......
+              </div>
+              
+          </div>
+        </div>
+        <button style="margin-left: 40%;width: 300px;" class="btn btn-success" type="approve">Save</button>
+      </div>
+    </div>
+  </div>
+ 
+

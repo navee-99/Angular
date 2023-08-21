@@ -1,0 +1,70 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a routerlink="/" href="">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Additional Approval</li>
+  </ol>
+</nav>
+
+
+<div class="container register">
+
+      <div class="col-md-12 register-right">
+        <div class="modal-header text-center">
+          <h5 class="modal-title w-100">Additional Approval</h5>
+        </div>
+
+          <div style="margin-top: 0%;" class="tab-content" >
+              <div style="margin-top: 2%;" class="xyz" id="home" role="tabpanel">
+
+                      <form style="margin-left: 28%;" class="col-lg-offset-8" >
+                          <div class="form-group">
+                              <label  for="website">CDSID:-</label>
+                              <input class="form-control" placeholder='CDSID' style="width: 15%;margin-left: 0%;" type="text" id="name">
+
+                          </div>
+                          <div class="form-group">
+                              <label for="website">Role:-</label>
+                              <input class="form-control" placeholder='Role' style="width: 15%;margin-left: 0%;" type="text" id="name">
+
+
+                          </div>
+                          <div class="form-group">
+                              <label  for="website">Program:-</label>
+                              <input class="form-control" placeholder='Program' style="width: 15%;margin-left: 0%;" type="text" id="name">
+
+                          </div>
+                          <div class="form-group">
+                              <label  for="website">Region:-</label>
+                              <select class="form-select" placeholder='Region' style="width: 15%;margin-left: 0%;" formControlName="Region"  >
+                                <option *ngFor="let item of this.data" [value]="item.Region"> {{item.Region}}</option>
+                               
+                                </select>
+                          </div>
+
+                          <div class="form-group">
+                              <label  for="website">Admin Comment:-</label>
+                              <input class="form-control" placeholder='Admin Comment' style="width: 15%;margin-left: 0%;" type="text" id="name">
+
+                          </div>
+
+
+                              <!-- <div class="form-group">
+
+                                  <textarea placeholder='CDSID:-' style="color:#0d5086;"></textarea>
+                                  <textarea placeholder='Role:-' style="color:#0d5086;"></textarea>
+                                  <textarea placeholder='Program:-' style="color:#0d5086;"></textarea>
+                                  <textarea placeholder='Region:-' style="color:#0d5086;"></textarea>
+                                  <textarea placeholder='Admin Comment:-' style="color:#0d5086;"></textarea>
+
+
+                              </div> -->
+
+                          <br>
+                          <button style="width: 30%; margin-left: 17%;" class="btn btn-success" type="approve">Approve</button>
+
+                      </form>
+          </div>
+      </div>
+  </div>
+
+</div>

@@ -1,0 +1,430 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a routerlink="/" href="">Home</a></li>
+    <li class="breadcrumb-item " aria-current="page">Data Issues Static Dynamic</li>
+    <a class="responsive" class="glyphicon glyphicon-user disabled"
+      style="color:black;margin-top: 0PX;margin-left: 1255PX;"> Naveen</a>
+  </ol>
+</nav>
+<h5 style="text-align: center;">iBuy Off</h5>
+
+<div>
+  <button class="btn1" [ngClass]="{'active':isClicked1}" (click)="onclick1()">Dynamic</button>
+  <button class="btn2" [ngClass]="{'active':isClicked2}" (click)="onclick2()">Static</button>
+</div><br>
+<div *ngIf="static">
+  <div style="margin-left: 10px;">
+
+    <label>Program Name: &nbsp;{{list.programNo}}</label>
+    <label>Part Name: &nbsp;{{list.partName}}</label>
+    <label>BuyOff Type: &nbsp;{{list.buyOffType}}</label>
+  </div><br>
+  <div class="border">
+
+    <div class="table-responsive " style="height: 590px;">
+      <table class="table table-bordered">
+        <thead>
+          <th *ngFor="let x of list.data">{{ x.title }}</th>
+        </thead>
+
+
+        <tbody>
+          <td>
+            <tr class="dynamictabletd" *ngFor="let x of list.data[0].data">
+              <p>{{x}}</p>
+            </tr>
+          </td>
+          <td>
+            <tr class="dynamictabletd" *ngFor="let x of list.data[0].data">
+              <p>{{x}}</p>
+            </tr>
+          </td>
+          <td>
+            <tr class="dynamictabletd" *ngFor="let x of list.data[2].data">
+              <p>{{x}}</p>
+            </tr>
+          </td>
+          <td>
+            <tr class="dynamictabletd" *ngFor="let x of list.data[3].data">
+              <p>{{x}}</p>
+            </tr>
+          </td>
+          <td>
+            <tr class="dynamictabletd" *ngFor="let x of list.data[4].data">
+              <p>{{x}}</p>
+            </tr>
+          </td>
+          <td>
+            <tr class="dynamictabletd" *ngFor="let x of list.data[5].data">
+              <p>{{x}}</p>
+            </tr>
+          </td>
+          <td>
+            <tr class="dynamictabletd" *ngFor="let x of list.data[6].data">
+              <p>{{x}}</p>
+            </tr>
+          </td>
+          <td>
+            <tr class="dynamictabletd" *ngFor="let x of list.data[7].data">
+              <a (click)="issueimagegallary1(x.image[0])"><img *ngIf="add(x)" src="{{add(x)}}"
+                  style="width:120px;margin-top: 15px;">
+              </a>
+            </tr>
+          </td>
+          <td>
+            <tr class="dynamictabletd" *ngFor="let x of list.data[8].data">
+              <p>{{x}}</p>
+            </tr>
+          </td>
+          <td>
+            <tr class="dynamictabletd" *ngFor="let x of list.data[9].data">
+              <a (click)="solimagegallary1(x.image[0])"> <img *ngIf="add(x)" src="{{add(x)}}"
+                  style="width:120px;margin-top: 15px;">
+              </a>
+            </tr>
+          </td>
+          <td>
+            <tr class="dynamictabletd" *ngFor="let x of list.data[10].data">
+              <p>{{x}}</p>
+            </tr>
+          </td>
+          <td>
+            <tr class="dynamictabletd" *ngFor="let x of list.data[11].data">
+              <p>{{x}}</p>
+            </tr>
+          </td>
+          <td>
+            <tr class="dynamictabletd" *ngFor="let x of list.data[12].data">
+              <p>{{x}}</p>
+            </tr>
+          </td>
+          <td>
+            <tr class="dynamictabletd" *ngFor="let x of list.data[13].data">
+              <p>{{x}}</p>
+            </tr>
+          </td>
+        </tbody>
+
+
+
+
+      </table>
+    </div>
+  </div>
+  <!-- begin of static issue image gallary display logic-->
+  <div class="container">
+
+    <p-dialog [(visible)]="geeks">
+      <h3 style="text-align:center;position:sticky; top:0px;z-index: 1;height: 30px;background-color: white;"><b> ISSUE
+          IMAGE</b></h3>
+      <div class="carousel">
+
+
+        <div *ngIf="condition1">
+          <div class="header1">
+            <b>(1/1)</b>
+            <div *ngIf="indicators" class="carousel-dot-container">
+              <span class="dot" [ngClass]="{'active':currentindex === currentindex}"
+                (click)="selectimage(currentindex)"></span>
+            </div>
+          </div>
+          <img class="image" src="{{url1}}">
+        </div>
+        <div *ngIf="condition2">
+          <div class="header2">
+            <b>({{currentindex+1}}/{{array1.length}})</b>
+            <div *ngIf="indicators" class="carousel-dot-container">
+              <span *ngFor="let dot of array1;let i=index" class="dot" [ngClass]="{'active':currentindex ===i}"
+                (click)="selectimage(i)">
+
+
+              </span>
+            </div>
+          </div>
+
+          <ul class="list-ul">
+            <li class="list-li" *ngFor="let item of array1;let i=index">
+
+              <ng-container *ngIf="i===currentindex">
+
+                <img class="image" [src]="item">
+
+              </ng-container>
+            </li>
+          </ul>
+
+
+          <a class="next" (click)="next()"> <span class="carousel-control-next-icon" aria-hidden="true"></span></a>
+          <a class="pre" (click)="pre()"> <span class="carousel-control-prev-icon" aria-hidden="true"></span></a>
+
+        </div>
+      </div>
+
+    </p-dialog>
+  </div>
+
+ <!-- begin of static solution image gallary display logic-->
+  <div class="container">
+    <p-dialog [(visible)]="geeks1">
+      <h3 style="text-align:center;position:sticky; top:0px;z-index: 1;height: 30px;background-color: white;"><b>
+          SOLUTION IMAGE</b></h3>
+
+      <div class="carousel">
+        <div *ngIf="cond1">
+          <div class="header1">
+            <b>(1/1)</b>
+            <div *ngIf="indicators" class="carousel-dot-container">
+              <span class="dot" [ngClass]="{'active':currentindex === currentindex}"
+                (click)="selectimage(currentindex)"></span>
+            </div>
+          </div>
+          <img class="image" src="{{url2}}">
+        </div>
+        <div *ngIf="cond2">
+          <div class="header2">
+            <b>({{currentindex+1}}/{{array2.length}})</b>
+            <div *ngIf="indicators" class="carousel-dot-container">
+              <span *ngFor="let dot of array2;let i=index" class="dot" [ngClass]="{'active':currentindex ===i}"
+                (click)="selectimage(i)">
+
+
+              </span>
+            </div>
+          </div>
+          <ul class="list-ul">
+            <li class="list-li" *ngFor="let item of array2;let i=index">
+
+              <ng-container *ngIf="i===currentindex">
+
+                <img class="image" [src]="item">
+
+              </ng-container>
+            </li>
+          </ul>
+
+
+          <a class="next" (click)="next1()"> <span class="carousel-control-next-icon" aria-hidden="true"></span></a>
+          <a class="pre" (click)="pre1()"> <span class="carousel-control-prev-icon" aria-hidden="true"></span></a>
+
+        </div>
+      </div>
+
+    </p-dialog>
+
+  </div>
+
+</div>
+<!-- ending of static -->
+
+<div *ngIf="dynamic">
+  <div style="margin-left: 10px;">
+
+    <label>Program Name: &nbsp;{{collections.programNo}}</label>
+    <label>Part Name: &nbsp;{{collections.partName}}</label>
+    <label>BuyOff Type: &nbsp;{{collections.buyOffType}}</label>
+  </div>
+  <div class="border">
+    <div class="border">
+
+      <div class="table-responsive " style="height: 590px;">
+        <table class="table table-bordered">
+
+
+          <thead>
+            <th *ngFor="let x of collections.data">{{ x.title }}</th>
+          </thead>
+
+
+          <tbody>
+            <td>
+              <tr class="dynamictabletd" *ngFor="let x of collections.data[0].data">
+                <p>{{x}}</p>
+              </tr>
+            </td>
+            <td>
+              <tr class="dynamictabletd" *ngFor="let x of collections.data[0].data">
+                <p>{{x}}</p>
+              </tr>
+            </td>
+            <td>
+              <tr class="dynamictabletd" *ngFor="let x of collections.data[2].data">
+                <p>{{x}}</p>
+              </tr>
+            </td>
+            <td>
+              <tr class="dynamictabletd" *ngFor="let x of collections.data[3].data">
+                <p>{{x}}</p>
+              </tr>
+            </td>
+            <td>
+              <tr class="dynamictabletd" *ngFor="let x of collections.data[4].data">
+                <p>{{x}}</p>
+              </tr>
+            </td>
+            <td>
+              <tr class="dynamictabletd" *ngFor="let x of collections.data[5].data">
+                <p>{{x}}</p>
+              </tr>
+            </td>
+            <td>
+              <tr class="dynamictabletd" *ngFor="let x of collections.data[6].data">
+                <p>{{x}}</p>
+              </tr>
+            </td>
+            <td>
+              <tr class="dynamictabletd" *ngFor="let x of collections.data[7].data">
+                <a (click)="issueimagegallary2(x.image[0])"><img *ngIf="add(x)" src="{{add(x)}}"
+                    style="width:120px;margin-top: 15px;"> </a>
+              </tr>
+            </td>
+            <td>
+              <tr class="dynamictabletd" *ngFor="let x of collections.data[8].data">
+                <p>{{x}}</p>
+              </tr>
+            </td>
+            <td>
+              <tr class="dynamictabletd" *ngFor="let x of collections.data[9].data">
+                <a (click)="solimagegallary2(x.image[0])"><img *ngIf="add(x)" src="{{add(x)}}"
+                    style="width:120px;margin-top: 15px;"> </a>
+              </tr>
+            </td>
+            <td>
+              <tr class="dynamictabletd" *ngFor="let x of collections.data[10].data">
+                <p>{{x}}</p>
+              </tr>
+            </td>
+            <td>
+              <tr class="dynamictabletd" *ngFor="let x of collections.data[11].data">
+                <p>{{x}}</p>
+              </tr>
+            </td>
+            <td>
+              <tr class="dynamictabletd" *ngFor="let x of collections.data[12].data">
+                <p>{{x}}</p>
+              </tr>
+            </td>
+            <td>
+              <tr class="dynamictabletd" *ngFor="let x of collections.data[13].data">
+                <p>{{x}}</p>
+              </tr>
+            </td>
+          </tbody>
+
+
+
+        </table>
+      </div>
+    </div>
+
+    
+   
+
+
+
+
+
+
+
+    <!-- begin of dynamic issue image gallary display logic -->
+
+    <div class="container">
+
+      <p-dialog [(visible)]="geeks2">
+        <h3 style="text-align:center;position:sticky; top:0px;z-index: 1;height: 30px;background-color: white;"><b>
+            ISSUE IMAGE</b></h3>
+        <div class="carousel">
+
+
+          <div *ngIf="condition3">
+            <div class="header1">
+              <b> (1/1)</b>
+              <div *ngIf="indicators" class="carousel-dot-container">
+                <span class="dot" [ngClass]="{'active':currentindex === currentindex}"
+                  (click)="selectimage(currentindex)"></span>
+              </div>
+            </div>
+            <img class="image" src="{{url3}}">
+          </div>
+          <div *ngIf="condition4">
+            <div class="header2">
+              <b>({{currentindex+1}}/{{array3.length}})</b>
+              <div *ngIf="indicators" class="carousel-dot-container">
+                <span *ngFor="let dot of array3;let i=index" class="dot" [ngClass]="{'active':currentindex ===i}"
+                  (click)="selectimage(i)">
+
+
+                </span>
+              </div>
+            </div>
+
+            <ul class="list-ul">
+              <li class="list-li" *ngFor="let item of array3;let i=index">
+
+                <ng-container *ngIf="i===currentindex">
+
+                  <img class="image" [src]="item">
+
+                </ng-container>
+              </li>
+            </ul>
+
+
+            <a class="next" (click)="next2()"> <span class="carousel-control-next-icon" aria-hidden="true"></span></a>
+            <a class="pre" (click)="pre2()"> <span class="carousel-control-prev-icon" aria-hidden="true"></span></a>
+
+          </div>
+        </div>
+
+      </p-dialog>
+    </div>
+
+
+     <!-- begin of dynamic solution image gallary display logic -->
+    <div class="container">
+      <p-dialog [(visible)]="geeks3">
+        <h3 style="text-align:center;position:sticky; top:0px;z-index: 1;height: 30px;background-color: white;"><b>
+            SOLUTION IMAGE</b></h3>
+        <div class="carousel">
+          <div *ngIf="cond3">
+            <div class="header1">
+              <b>(1/1)</b>
+              <div *ngIf="indicators" class="carousel-dot-container">
+                <span class="dot" [ngClass]="{'active':currentindex === currentindex}"
+                  (click)="selectimage(currentindex)"></span>
+              </div>
+            </div>
+            <img class="image" src="{{url4}}">
+          </div>
+          <div *ngIf="cond4">
+            <div class="header2">
+              <b>({{currentindex+1}}/{{array4.length}})</b>
+              <div *ngIf="indicators" class="carousel-dot-container">
+                <span *ngFor="let dot of array4;let i=index" class="dot" [ngClass]="{'active':currentindex ===i}"
+                  (click)="selectimage(i)">
+
+
+                </span>
+              </div>
+            </div>
+            <ul class="list-ul">
+              <li class="list-li" *ngFor="let item of array4;let i=index">
+
+                <ng-container *ngIf="i===currentindex">
+
+                  <img class="image" [src]="item">
+
+                </ng-container>
+              </li>
+            </ul>
+
+
+            <a class="next" (click)="next3()"> <span class="carousel-control-next-icon" aria-hidden="true"></span></a>
+            <a class="pre" (click)="pre3()"> <span class="carousel-control-prev-icon" aria-hidden="true"></span></a>
+
+          </div>
+        </div>
+
+      </p-dialog>
+
+    </div>
+  </div>

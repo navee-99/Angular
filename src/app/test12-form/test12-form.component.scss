@@ -1,0 +1,110 @@
+.register1{
+    background: -webkit-linear-gradient(left, hsl(244, 56%, 44%), #e6723d);
+    margin-top: 3%;
+    padding: 3%;
+}
+.register-left{
+    text-align: center;
+    color: rgb(248, 244, 244);
+    margin-top: 4%;
+}
+.row:not(#jsonEditorTree) {
+    border-bottom: solid 1px transparent;
+    box-sizing: border-box;
+    background-color:#005b9f;
+}
+.register-left input{
+    border: none;
+    border-radius: 1.5rem;
+    padding: 2%;
+    width: 60%;
+    background: hsl(120, 14%, 93%);
+    font-weight: bold;
+    color: #0d5086;
+    margin-top: 30%;
+    margin-bottom: 3%;
+    cursor: pointer;
+}
+.register-right{
+    background: hsl(120, 14%, 93%);
+    border-top-left-radius: 10% 50%;
+    border-bottom-left-radius: 10% 50%;
+}
+.register-left img{
+    margin-top: 20%;
+    margin-bottom: 10%;
+    width: 30%;
+    -webkit-animation: mover 2s infinite  alternate;
+    animation: mover 1s infinite  alternate;
+}
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+.register-left p{
+    font-weight:lighter;
+    padding: 25%;
+    margin-top: -15%;
+}
+.h1 {
+    text-align: center;
+    margin-right: 10%;
+}
+
+.register .nav-tabs .nav-link:hover{
+    border: none;
+}
+.register .nav-tabs .nav-link.active{
+    width: 100px;
+    color: hsl(211, 100%, 40%);
+    border: 2px solid #033a75;
+    border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+}
+.register-heading{
+    text-align: center;
+    margin-top: 20%;
+    margin-bottom: -5%;
+    color: #0ef30e;
+}
+.col-lg-offset-8 {
+    margin-left: 15%;
+}
+.invalid-feedback {
+    display: none;
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: 80%;
+    color: #dc3545;
+}
+.is-invalid ~ .invalid-feedback {
+    display: block;
+}
+  
+  h1 {
+      text-align: center;
+      margin-right: 9%;
+    }
+
+.required:after {
+    content:" *";
+    color: red;
+  }
+  .form-group{
+      width: 500%;
+  }
+  .col-lg-4 {
+    width: 24%;
+}
+.btn-primary:hover  {
+    color: #3c6b9b !important;
+    background-color: #ebf0eb !important;
+    border-color: #4c94af !important;
+}
+.totalSize{
+    height: 100%;
+    }
